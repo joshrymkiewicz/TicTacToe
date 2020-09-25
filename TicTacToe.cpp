@@ -12,10 +12,10 @@ enum class BoardSpace { Empty, P1, P2 };
 BoardSpace ** CreateBoard()
 {
     // Allocate a 2 dimensional array to return
-    BoardSpace **ret = new BoardSpace*[3];
+    BoardSpace **space = new BoardSpace*[3];
     for( int i=0; i<3; i++ )
     {
-        ret[i] = new BoardSpace[3];
+        space[i] = new BoardSpace[3];
     }
 
     // Fill the
@@ -23,15 +23,15 @@ BoardSpace ** CreateBoard()
     {
         for( int j=0; j<3; j++ )
         {
-            ret[i][j] = BoardSpace::Empty;
+            space[i][j] = BoardSpace::Empty;
         }
     }
 
-    return ret;
+    return space;
 }
 
 int main( int argc, char *argv[])
-{
+{ //Pull Request 1
 
     //BoardSpace **game_board = CreateBoard();
     CreateBoard();
