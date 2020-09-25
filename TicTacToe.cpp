@@ -1,5 +1,6 @@
 #include <iostream>
 
+
 void DisplayBoard(std::string board[3][3]){
   for(int i =0; i < 3; i++){
     for(int j=0; j< 3; j++){
@@ -8,6 +9,7 @@ void DisplayBoard(std::string board[3][3]){
     std::cout<<"|"<<std::endl;
   }
 }
+
 
 void fillBoard(std::string board[3][3]){
 
