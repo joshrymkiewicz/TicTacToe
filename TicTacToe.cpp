@@ -29,6 +29,20 @@ BoardSpace ** CreateBoard()
 
     return space;
 }
+void DisplayBoard(BoardSpace **newBoard)
+{
+    for( int i=0; i<3; i++ )
+    {
+        for( int j=0; j<3; j++ )
+        {
+            BoardSpace current = newBoard[i][j];
+            if( current == BoardSpace::P1 ){std::cout << "X ";}
+            else if( current == BoardSpace::P2 ){std::cout << "O ";}
+            else {std::cout << "EMPTY";}
+        }
+        std::cout << std::endl;
+    }
+}
 
 int main( int argc, char *argv[])
 { //Pull Request 1
