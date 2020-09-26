@@ -66,7 +66,7 @@ public:
 };
 
 void PlaceMarker(int x, int y, std::string mark){
-  board[x][y] = mark;
+  board[x-1][y-1] = mark; //edited values
 
 };
 
