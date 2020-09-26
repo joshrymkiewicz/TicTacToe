@@ -1,0 +1,88 @@
+Joshuas-MacBook-Air:TicTacToe joshuarymkiewicz$ ./main
+Welcome to Tic-Tac-Toe!
+Player 1, what would you like your marker to be?
+X
+Player 2, what would you like your marker to be?
+O 
+1|empty|empty|empty|
+2|empty|empty|empty|
+3|empty|empty|empty|
+What position would you like to fill?
+Row:
+1
+Col:
+1 
+1|X|empty|empty|
+2|empty|empty|empty|
+3|empty|empty|empty|
+What position would you like to fill?
+Row:
+2
+Col:
+2
+1|X|empty|empty|
+2|empty|O|empty|
+3|empty|empty|empty|
+What position would you like to fill?
+Row:
+3
+Col:
+2
+1|X|empty|empty|
+2|empty|O|empty|
+3|empty|X|empty|
+What position would you like to fill?
+Row:
+1
+Col:
+3 
+1|X|empty|O|
+2|empty|O|empty|
+3|empty|X|empty|
+What position would you like to fill?
+Row:
+2
+Col:
+3
+1|X|empty|O|
+2|empty|O|X|
+3|empty|X|empty|
+What position would you like to fill?
+Row:
+1
+Col:
+3
+Please enter a valid position
+What position would you like to fill?
+Row:
+3
+Col:
+1
+1|X|empty|O|
+2|empty|O|X|
+3|O|X|empty|
+What position would you like to fill?
+Row:
+3
+Col:
+3
+1|X|empty|O|
+2|empty|O|X|
+3|O|X|X|
+What position would you like to fill?
+Row:
+1
+Col:
+2
+1|X|O|O|
+2|empty|O|X|
+3|O|X|X|
+What position would you like to fill?
+Row:
+2
+Col:
+1
+1|X|O|O|
+2|X|O|X|
+3|O|X|X|
+Joshuas-MacBook-Air:TicTacToe joshuarymkiewicz$ 
