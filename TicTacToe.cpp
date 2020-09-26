@@ -3,11 +3,17 @@
 class Board {
 public:
 	Board(){
+    play = false;
+    p1Turn = true;
     for(int i =0; i < 3; i++){
       for(int j=0; j< 3; j++){
          board[i][j]= "empty";
       }
     }
+    std::cout<<"Player 1, what would you like your marker to be?"<<std::endl;
+    std::cin >> markerp1;
+    std::cout<<"Player 2, what would you like your marker to be?"<<std::endl;
+    std::cin >> markerp2;
   };
 	void DisplayBoard(){
     for(int i =0; i < 3; i++){
@@ -49,14 +55,19 @@ public:
         }
       }
       if(goodRow == true && goodCol == true){
-        if(board[choice1][choice2] == "empty"){
-          std::cout<<"What would you like your marker to be?"<<std::endl;
-          std::cin >> marker;
+        if(board[choice1-1][choice2-1] == "empty"){
           goodChoice = true;
-          PlaceMarker(choice1,choice2,marker);
+          if(p1Turn == true){
+            PlaceMarker(choice1-1,choice2-1,markerp1);
+          }
+          else{
+            PlaceMarker(choice1-1,choice2-1,markerp2);
+          }
+
           DisplayBoard();
         }
         else{
+          std::cout<<"Please enter a valid position"<<std::endl;
           goodRow = false;
           goodCol = false;
         }
@@ -65,16 +76,22 @@ public:
     }
 };
 
+  bool getPlay(){return play;}
 void PlaceMarker(int x, int y, std::string mark){
-  board[x-1][y-1] = mark; //edited values
+  board[x][y] = mark; //edited values
 
 };
-
+  void setPlayer(){p1Turn = !p1Turn;}
 	int get_rows() const {return 3; }  // you should be able to change the size of your
 	int get_cols() const {return 3; }  // board by changing these numbers and the numbers in the arr_ field
 
 private:
 	std::string board[3][3];
+  bool play;
+  bool p1Turn;
+  std::string markerp1;
+  std::string markerp2;
+
 };
 
 int main( int argc, char *argv[])
@@ -82,6 +99,12 @@ int main( int argc, char *argv[])
     std::cout << "Welcome to Tic-Tac-Toe!" << std::endl;
     Board p1;
     p1.DisplayBoard();
-    p1.GetPlayerChoice();
+    int i = 0;
+    while(p1.getPlay() == true || i < 9)
+    {
+      p1.GetPlayerChoice();
+      p1.setPlayer();
+      i++;
+    }
 
 }
